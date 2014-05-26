@@ -4,17 +4,79 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
-        <!--
+    <!-- <style name="AppBaseTheme" parent="Theme.AppCompat.Light">
+        
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
-        -->
-    </style>
+       
+    </style> -->
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    <!-- <style name="AppTheme" parent="AppBaseTheme">
+        All customizations that are NOT specific to a particular API-level can go here.
+    </style> -->
+    
+    
+    
+    <style name="Theme.Inforgest" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarItemBackground">@drawable/selectable_background_inforgest</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Inforgest</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Inforgest</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Inforgest</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Inforgest</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Inforgest</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_inforgest</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_inforgest</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Inforgest</item>
+
+                <!-- Light.DarkActionBar specific -->
+        <item name="actionBarWidgetTheme">@style/Theme.Inforgest.Widget</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Inforgest" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/ab_solid_inforgest</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_inforgest</item>
+        <item name="backgroundSplit">@drawable/ab_bottom_solid_inforgest</item>
+        <item name="progressBarStyle">@style/ProgressBar.Inforgest</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Inforgest" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="background">@drawable/ab_transparent_inforgest</item>
+        <item name="progressBarStyle">@style/ProgressBar.Inforgest</item>
+    </style>
+	
+    <style name="PopupMenu.Inforgest" parent="@style/Widget.AppCompat.PopupMenu">	
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_inforgest</item>	
+    </style>
+	
+    <style name="DropDownListView.Inforgest" parent="@style/Widget.AppCompat.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_inforgest</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Inforgest" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_inforgest</item>
+    </style>
+	
+    <style name="DropDownNav.Inforgest" parent="@style/Widget.AppCompat.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_inforgest</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_inforgest</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_inforgest</item>
+    </style>
+    
+    <style name="ProgressBar.Inforgest" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_inforgest</item>
+    </style>
+    
+    <style name="ActionButton.CloseMode.Inforgest" parent="@style/Widget.AppCompat.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_inforgest</item>
+    </style>
+    
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Inforgest.Widget" parent="@style/Theme.AppCompat">
+        <item name="popupMenuStyle">@style/PopupMenu.Inforgest</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Inforgest</item>
     </style>
 
 </resources>
