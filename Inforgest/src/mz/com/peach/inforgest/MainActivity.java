@@ -1,21 +1,22 @@
 package mz.com.peach.inforgest;
 
+import mz.com.peach.inforgest.fragment.Home.HomeFragment;
+import mz.com.peach.inforgest.fragment.about.AboutFragment;
+import mz.com.peach.inforgest.fragment.archive.ArchiveFragment;
+import mz.com.peach.inforgest.fragment.customer.CustomerFragment;
+import mz.com.peach.inforgest.fragment.supplier.SupplierFragment;
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity
@@ -50,12 +51,76 @@ public class MainActivity extends ActionBarActivity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
+        /*fragmentManager.beginTransaction()
                 .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
+                .commit();*/
+        
+        Fragment fragment;
+        switch (position) {
+		// Home
+		case 0:
+			fragment = new HomeFragment();
+			//fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// System	
+		case 1:
+			fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Archive
+		case 2:
+			fragment = new ArchiveFragment();
+			//fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Client
+		case 3:
+			fragment = new CustomerFragment();
+			//fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Suppliers
+		case 4:
+			fragment = new SupplierFragment();
+			//fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Products
+		case 5:
+			//fragment = new ProductFragment();
+			fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Treasury
+		case 6:
+			//fragment = new NotImplementedFragment();
+			fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Technical assistence
+		case 7:
+			//fragment = new NotImplementedFragment();
+			fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// Listings
+		case 8:
+			//fragment = new ListingsFragment();
+			fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		// About	
+		case 9:
+			fragment = new AboutFragment();
+			//fragment = PlaceholderFragment.newInstance(position + 1);
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		}
+        
     }
 
-    public void onSectionAttached(int number) {
+    /*public void onSectionAttached(int number) {
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
@@ -67,7 +132,7 @@ public class MainActivity extends ActionBarActivity
                 mTitle = getString(R.string.title_section3);
                 break;
         }
-    }
+    }*/
 
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
@@ -136,12 +201,12 @@ public class MainActivity extends ActionBarActivity
             return rootView;
         }
 
-        @Override
+        /*@Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
-        }
+        }*/
     }
 
 }

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnProForm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnProForm" />
+
+        <Button
+            android:id="@+id/btnInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnInvoice" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnCashSale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnCashSale" />
+
+        <Button
+            android:id="@+id/btnCustSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnCustSearch" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnDelGuides"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnDelGuides" />
+
+        <Button
+            android:id="@+id/btnDebitNote"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnDebitNote" />
+    </TableRow>
+
+</TableLayout>

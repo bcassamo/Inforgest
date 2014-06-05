@@ -2,12 +2,173 @@
 <resources>
 
     <string name="app_name">Inforgest</string>
+    <string name="app_description">        IgestMobile is a sales management system, designed for android,
+        in order to facilitate access to the system and solve the problem away from the customer-supplier.</string>
+    <string name="dbl_url">www.database.co.mz</string>
+    <string name="designed_by">Designed By Banucho Cassamo</string>
+
+    <!--
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
+    -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="not_implemented">View Not Implemented</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <string-array name="nav_drawer_menu">
+        <item>Home</item>
+        <item>System</item>
+        <item>Archive</item>
+        <item>Client</item>
+        <item>Suppliers</item>
+        <item>Products</item>
+        <item>Treasury</item>
+        <item>Technical assistence</item>
+        <item>Listings</item>
+        <item>About</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/action_home</item>
+        <item>@drawable/action_system</item>
+        <item>@drawable/action_archive</item>
+        <item>@drawable/action_about</item>
+        <item>@drawable/action_about</item>
+        <item>@drawable/action_about</item>
+        <item>@drawable/action_about</item>
+        <item>@drawable/action_about</item>
+        <item>@drawable/action_about</item>
+        <item>@drawable/action_about</item>
+    </array>
+
+    <!-- Archive tab titles -->
+    <string-array name="archive_tab_titles">
+        <item>Product Parametrization</item>
+        <item>Entitys</item>
+        <item>Documents</item>
+        <item>Other Configuration</item>
+    </string-array>
+
+    <!-- Client tab titles -->
+    <string-array name="client_tab_titles">
+        <item>Files and Customers</item>
+        <item>Documents</item>
+        <item>Baskets</item>
+    </string-array>
+
+    <!-- Supplier tab titles -->
+    <string-array name="supplier_tab_titles">
+        <item>Files and Supplier</item>
+        <item>Documents</item>
+        <item>Orders</item>
+    </string-array>
+
+    <!-- Product tab titles -->
+    <string-array name="product_tab_titles">
+        <item>Files and Products</item>
+        <item>Acerto de Stock</item>
+        <item>Inventário</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- Listings tab titles -->
+    <string-array name="listings_tab_titles">
+        <item>Customers</item>
+        <item>Suppliers</item>
+        <item>Products</item>
+        <item>Treasury</item>
+        <item>Other</item>
+    </string-array>
+
+    <!--
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="not_implemented">View Not Implemented</string>
+    -->
+
+
+    <!-- General Butons -->
+    <string name="txtCode">Code</string>
+    <string name="txtDesc">Description</string>
+    <string name="txtAcronym">Acronym</string>
+
+    <!-- Archieve Butons Menu -->
+    <!-- Paramentrization Buttons -->
+    <string name="btnFamily">Family</string>
+    <string name="btnGroups">Groups</string>
+    <string name="btnTypOfProd">Type of Products</string>
+    <string name="btnCurUnit">Currency Unit</string>
+    <string name="title_activity_group_form">Product Groups</string>
+    <string name="title_activity_currency_unit">Currency</string>
+
+    <!-- Entity Buttons -->
+    <string name="btnWareHouse">WareHouse</string>
+    <string name="btnSellers">Sellers</string>
+    <string name="btnTypeOfClient">Type Of Client</string>
+    <string name="btnCurrency">Currency</string>
+    <string name="btnExchange">Exchange</string>
+    <string name="btnBank">Bank</string>
+
+    <!-- Document Buttons -->
+    <string name="btnDocumentTypes">Document Types</string>
+    <string name="btnPaymentMethods">Payment Methods</string>
+    <string name="btnPaymentTerms">Payment Terms</string>
+
+    <!-- Customer Buttons Menu -->
+    <!-- Customer File Buttons -->
+    <string name="btnCustomers">Customers</string>
+    <string name="btnCurAccount">Current Accounts</string>
+
+    <!-- Customer Documents Buttons -->
+    <string name="btnProForm">Pro-Form</string>
+    <string name="btnInvoice">Invoice</string>
+    <string name="btnCashSale">Cash Sale</string>
+    <string name="btnCustSearch">Search</string>
+    <string name="btnDelGuides">Delivery Guides</string>
+    <string name="btnDebitNote">Debit Note</string>
+
+    <!-- Baskets Buttons -->
+    <string name="btnBaskets">Baskets</string>
+    <string name="btnSpent">Spent</string>
+    <string name="btnFidelityCard">Fidelity Card</string>
+
+    <!-- Supplier Buttons Menu -->
+    <!-- Supplier Files Buttons -->
+    <string name="btnSupplier">Supplier</string>
+    <string name="btnSupplierCurAccount">Current Accounts</string>
+
+    <!-- Supplier Documents Buttons -->
+    <string name="btnEntInStock">Entry into Stock</string>
+    <string name="btnSuppSearch">Search</string>
+
+    <!-- Supplier Orders Buttons -->
+    <string name="btnOrderToSupplier">Order To Supplier</string>
+
+    <!-- Product Buttons Menu -->
+    <!-- Product Files Buttons -->
+    <string name="btnProduct">Produtos</string>
+    <string name="btnProdPrices">Preços</string>
+    <string name="btnProdExist">Existências</string>
+    <string name="btnExtraProd">Extracto de Produtos</string>
+    <string name="btnConfWhereHouse">Confi. em Armazens</string>
+
+    <!-- Product Settlement Stock -->
+    <string name="btnProdSetStock">Settlement of Stock</string>
+    <string name="btnProdsearchSettl">Search Settlement</string>
+
+    <!-- Product Inventory Buttons -->
+    <string name="btnProdInventory">Inventory</string>
+    <string name="btnProdSearchinventory">Search Inventory</string>
+
+    <!-- Product Other Buttons -->
+    <string name="btnProdOther">Warehouse Transfer</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

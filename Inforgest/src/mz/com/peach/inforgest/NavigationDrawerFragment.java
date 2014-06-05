@@ -1,5 +1,6 @@
 package mz.com.peach.inforgest;
 
+import mz.com.peach.inforgest.adapter.MenuListAdapter;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
@@ -11,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -57,6 +59,11 @@ public class NavigationDrawerFragment extends Fragment {
     private int mCurrentSelectedPosition = 0;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
+    
+	private String[] mMenuTitles;
+	private int[] mIcon;
+	
+	private MenuListAdapter mMenuListAdapter;
 
     public NavigationDrawerFragment() {
     }
@@ -89,6 +96,10 @@ public class NavigationDrawerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+    	
+    	// TODO: Ver a possibilidade de tirar essa parte de bloco de codigo
+    	// e encaixar o fragment_navigation_drawer no drawer_list_item
+    	// ver tambem como esta no inforgest 1
         mDrawerListView = (ListView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -97,15 +108,22 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
-        mDrawerListView.setAdapter(new ArrayAdapter<String>(
+        
+        mMenuTitles = getResources().getStringArray(R.array.nav_drawer_menu);
+        mIcon = new int[] { R.drawable.action_home2, R.drawable.action_system, R.drawable.action_archive,
+        		R.drawable.action_client, R.drawable.action_about, R.drawable.action_about, R.drawable.action_about,
+        		R.drawable.action_about, R.drawable.action_about, R.drawable.action_about };
+        		//getResources().getIntArray(R.array.nav_drawer_icons);
+        
+        
+        mMenuListAdapter = new MenuListAdapter(getActivity(), mMenuTitles, mIcon);
+        
+        mDrawerListView.setAdapter(mMenuListAdapter);
+        /*mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_1,
                 android.R.id.text1,
-                new String[]{
-                        getString(R.string.title_section1),
-                        getString(R.string.title_section2),
-                        getString(R.string.title_section3),
-                }));
+                mMenuTitles));*/
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
     }

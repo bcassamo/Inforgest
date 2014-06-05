@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnDocumentTypes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnDocumentTypes" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnPaymentMethods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnPaymentMethods" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnPaymentTerms"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnPaymentTerms" />
+    </TableRow>
+
+</TableLayout>
