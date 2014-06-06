@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btnProdSetStock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnProdSetStock" />
+
+        <Button
+            android:id="@+id/btnProdsearchSettl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onBtnGroupClick"
+            android:text="@string/btnProdsearchSettl" />
+    </TableRow>
+    
+</TableLayout>

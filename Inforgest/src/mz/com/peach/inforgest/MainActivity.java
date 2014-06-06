@@ -4,6 +4,7 @@ import mz.com.peach.inforgest.fragment.Home.HomeFragment;
 import mz.com.peach.inforgest.fragment.about.AboutFragment;
 import mz.com.peach.inforgest.fragment.archive.ArchiveFragment;
 import mz.com.peach.inforgest.fragment.customer.CustomerFragment;
+import mz.com.peach.inforgest.fragment.product.ProductFragment;
 import mz.com.peach.inforgest.fragment.supplier.SupplierFragment;
 import android.app.Activity;
 import android.os.Bundle;
@@ -88,8 +89,8 @@ public class MainActivity extends ActionBarActivity
 			break;
 		// Products
 		case 5:
-			//fragment = new ProductFragment();
-			fragment = PlaceholderFragment.newInstance(position + 1);
+			fragment = new ProductFragment();
+			//fragment = PlaceholderFragment.newInstance(position + 1);
 			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 			break;
 		// Treasury
