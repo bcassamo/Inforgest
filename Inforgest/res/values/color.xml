@@ -7,4 +7,5 @@
     <color name="list_background_pressed">#ffbb33</color>
     <color name="list_divider">#272727</color>
     <color name="list_text">#000000</color>
+    <color name="welcome_blue">#33b5e5</color>
 </resources>

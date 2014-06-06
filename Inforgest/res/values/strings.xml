@@ -5,6 +5,7 @@
     <string name="app_description">        IgestMobile is a sales management system, designed for android,
         in order to facilitate access to the system and solve the problem away from the customer-supplier.</string>
     <string name="dbl_url">www.database.co.mz</string>
+    <string name="igest_welcome">Welcome to Inforgest</string>
     <string name="designed_by">Designed By Banucho Cassamo</string>
 
     <!--
@@ -168,7 +169,7 @@
 
     <!-- Product Other Buttons -->
     <string name="btnProdOther">Warehouse Transfer</string>
-    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="title_activity_splash_screen">Inforgest</string>
     <string name="hello_world">Hello world!</string>
 
 </resources>

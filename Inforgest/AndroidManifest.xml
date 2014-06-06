@@ -16,19 +16,18 @@
         <activity
             android:name="mz.com.peach.inforgest.MainActivity"
             android:label="@string/app_name" >
+            
+        </activity>
+        <activity
+            android:name="mz.com.peach.inforgest.SplashScreenActivity"
+            android:label="@string/title_activity_splash_screen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="mz.com.peach.inforgest.SplashScreenActivity"
-            android:label="@string/title_activity_splash_screen"
-            android:parentActivityName="mz.com.peach.inforgest.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="mz.com.peach.inforgest.MainActivity" />
         </activity>
     </application>
 
