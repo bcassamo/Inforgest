@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">InforGest</string>
+    <string name="app_description">
+        IgestMobile é um sistema de gestão comercial, desenhado para android,
+        como forma de facilitar o acesso ao sistema e resolver o problema de distância do cliente-fornecedor.
+    </string>
+    <string name="dbl_url">www.database.co.mz</string>
+    <string name="igest_welcome">Bem Vindo ao InforGest</string>
+    <string name="designed_by">Desenhado por Banucho Cassamo</string>
+    
+    <string name="navigation_drawer_open">Abre o navigation drawer</string>
+    <string name="navigation_drawer_close">Fecha navigation drawer</string>
+    <string name="not_implemented">View Não Implementada</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Definições</string>
+    
+    <string-array name="nav_drawer_menu">
+        <item >Casa</item>
+        <item >Sistema</item>
+        <item >Arquivo</item>
+        <item >Clientes</item>
+        <item >Fornecedores</item>
+        <item >Produtos</item>
+        <item >Tesouraria</item>
+        <item >Ass. Técnica</item>
+        <item >Listagens</item>
+        <item >Acerca</item>
+    </string-array>
+    
+    <!-- Arquive tab titles -->
+    <string-array name="archive_tab_titles">
+        <item >Parametrização de produtos</item>
+        <item >Entidades</item>
+        <item >Documentos</item>
+        <item >Outras configurações</item>
+    </string-array>
+    
+    <!-- Client tab titles -->
+    <string-array name="client_tab_titles">
+        <item >Ficheiro e Clientes</item>
+        <item >Documentos</item>
+        <item >Cabazes</item>
+    </string-array>
+    
+    <!-- Supplier tab titles -->
+    <string-array name="supplier_tab_titles">
+        <item >Ficheiro e Fornecedores</item>
+        <item >Documentos</item>
+        <item >Encomendas</item>
+    </string-array>
+    
+    <!-- Product tab titles -->
+    <string-array name="product_tab_titles">
+        <item >Ficheiro e Produtos</item>
+        <item >Acerto de Stock</item>
+        <item >Inventário</item>
+        <item >Outros</item>
+    </string-array>
+    
+    <!-- Listings tab titles -->
+    <string-array name="listings_tab_titles">
+        <item >Clientes</item>
+        <item >Fornecedores</item>
+        <item >Produtos</item>
+        <item >Tesouraria</item>
+        <item >Outros</item>
+    </string-array>
+
+    <!-- <string name="drawer_open">Abre o navigation drawer</string>
+    <string name="drawer_close">Fecha navigation drawer</string>
+    <string name="not_implemented">View Não Implementada</string> -->
+    
+    <!-- General Butons -->
+    <string name="txtCode">Código</string>
+    <string name="txtDesc">Designação</string>
+    <string name="txtAcronym">Sigla</string>
+    
+    						<!-- Archieve Butons Menu -->
+    <!-- Paramentrization Buttons -->
+    <string name="btnFamily">Famílias</string>
+    <string name="btnGroups">Grupos</string>
+    <string name="btnTypOfProd">Tipo de Produto</string>
+    <string name="btnCurUnit">Unidade de moeda</string>
+    <string name="title_activity_group_form">Groupos de Produtos</string>
+    <string name="title_activity_currency_unit">Moeda</string>
+    
+    <!-- Entity Buttons -->
+    <string name="btnWareHouse">Armazéns</string>
+    <string name="btnSellers">Vendedores</string>
+    <string name="btnTypeOfClient">Tipos de Clientes</string>
+    <string name="btnCurrency">Moedas</string>
+    <string name="btnExchange">Cambios</string>
+    <string name="btnBank">Bancos</string>
+    
+    <!-- Document Buttons -->
+    <string name="btnDocumentTypes">Tipos de Documento</string>
+    <string name="btnPaymentMethods">Formas de Pagamento</string>
+    <string name="btnPaymentTerms">Condições de Pagamento</string>
+    
+    						<!-- Customer Buttons Menu -->
+    <!-- Customer File Buttons -->
+    <string name="btnCustomers">Clientes</string>
+    <string name="btnCurAccount">Contas Correntes</string>
+    
+    <!-- Customer Documents Buttons -->
+    <string name="btnProForm">Pro-Forma</string>
+    <string name="btnInvoice">Fatura</string>
+    <string name="btnCashSale">Venda a Dinheiro</string>
+    <string name="btnCustSearch">Consultar</string>
+    <string name="btnDelGuides">Guias de entrega</string>
+    <string name="btnDebitNote">Nota de Débito</string>
+    
+    <!-- Baskets Buttons -->
+    <string name="btnBaskets">Cabazes</string>
+    <string name="btnSpent">Consultar Consumo</string>
+    <string name="btnFidelityCard">Cartão de Fidelidade</string>
+    
+    						<!-- Supplier Buttons Menu -->
+    <!-- Supplier Files Buttons -->
+    <string name="btnSupplier">Fornecedor</string>
+    <string name="btnSupplierCurAccount">Contas Correntes</string>
+    
+    <!-- Supplier Documents Buttons -->
+    <string name="btnEntInStock">Entrada em Stock</string>
+    <string name="btnSuppSearch">Consultar</string>
+    
+    <!-- Supplier Orders Buttons -->
+    <string name="btnOrderToSupplier">Encomendas a Fornecedores</string>
+    
+    						<!-- Product Buttons Menu -->
+    <!-- Product Files Buttons -->
+    <string name="btnProduct">Produtos</string>
+    <string name="btnProdPrices">Preços</string>
+    <string name="btnProdExist">Existências</string>
+    <string name="btnExtraProd">Extracto de Produtos</string>
+    <string name="btnConfWhereHouse">Confi. em Armazens</string>
+    
+    <!-- Product Settlement Stock Buttons -->
+    <string name="btnProdSetStock">Acerto de Stocks</string>
+    <string name="btnProdsearchSettl">Consultar Acertos</string>
+    
+    <!-- Product Inventory Buttons -->
+    <string name="btnProdInventory">Inventário</string>
+    <string name="btnProdSearchinventory">consultar Inventário</string>
+    
+    <!-- Product Other Buttons -->
+    <string name="btnProdOther">Transferência de Armazém</string>
+</resources>

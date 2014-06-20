@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Inforgest</string>
+    <string name="app_name">InforGest</string>
     <string name="app_description">        IgestMobile is a sales management system, designed for android,
         in order to facilitate access to the system and solve the problem away from the customer-supplier.</string>
     <string name="dbl_url">www.database.co.mz</string>
-    <string name="igest_welcome">Welcome to Inforgest</string>
+    <string name="igest_welcome">Welcome to InforGest</string>
     <string name="designed_by">Designed By Banucho Cassamo</string>
 
     <!--
@@ -153,10 +153,10 @@
 
     <!-- Product Buttons Menu -->
     <!-- Product Files Buttons -->
-    <string name="btnProduct">Produtos</string>
-    <string name="btnProdPrices">Preços</string>
-    <string name="btnProdExist">Existências</string>
-    <string name="btnExtraProd">Extracto de Produtos</string>
+    <string name="btnProduct">Products</string>
+    <string name="btnProdPrices">Prices</string>
+    <string name="btnProdExist">Existences</string>
+    <string name="btnExtraProd">Extract Products</string>
     <string name="btnConfWhereHouse">Confi. em Armazens</string>
 
     <!-- Product Settlement Stock -->
