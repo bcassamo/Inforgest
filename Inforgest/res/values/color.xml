@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
     <color name="igest_color">#ff8400</color>
-    
+    <color name="igest_color2">#ff8800</color>
     <color name="list_item_title">#fff</color>
     <color name="list_background">#f5f5f5</color>
     <color name="list_background_pressed">#ffbb33</color>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btnProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnProduct" />
+
+        <Button
+            android:id="@+id/btnProdPrices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onBtnGroupClick"
+            android:text="@string/btnProdPrices" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnProdExist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnProdExist" />
+
+        <Button
+            android:id="@+id/btnExtraProd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="onBtnCurUnitClick"
+            android:text="@string/btnExtraProd" />
+    </TableRow>
+    
+	<TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnConfWhereHouse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/btnConfWhereHouse" />
+    </TableRow>
+    
+</TableLayout><!-- From: file:/home/peach/git/Inforgest/Inforgest/res/layout/fragment_product_files.xml -->

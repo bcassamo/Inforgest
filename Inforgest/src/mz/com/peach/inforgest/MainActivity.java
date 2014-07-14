@@ -6,7 +6,6 @@ import mz.com.peach.inforgest.fragment.archive.ArchiveFragment;
 import mz.com.peach.inforgest.fragment.customer.CustomerFragment;
 import mz.com.peach.inforgest.fragment.product.ProductFragment;
 import mz.com.peach.inforgest.fragment.supplier.SupplierFragment;
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
