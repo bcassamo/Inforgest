@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff5722">
+        
+        <TextView
+            android:id="@+id/action_product_family"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="80dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/action_product_family"
+            android:onClick="seleccionarOpcao"
+            android:text="@string/btnFamily"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/action_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/action_product_family"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/action_group"
+            android:onClick="seleccionarOpcao"
+            android:text="@string/btnGroups"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/action_product_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/action_product_family"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
+            android:clickable="true"
+            android:drawableTop="@drawable/action_product_type"
+            android:onClick="seleccionarOpcao"
+            android:text="@string/btnTypOfProd"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/action_currency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/action_product_type"
+            android:layout_alignRight="@id/action_group"
+            android:clickable="true"
+            android:drawableTop="@drawable/action_currency2"
+            android:onClick="seleccionarOpcao"
+            android:text="@string/btnCurUnit"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+    </RelativeLayout>
+
+</LinearLayout>
