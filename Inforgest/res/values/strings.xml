@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">InforGest</string>
-    <string name="app_description">        IgestMobile is a sales management system, designed for android,
-        in order to facilitate access to the system and solve the problem away from the customer-supplier.</string>
+    <string name="app_description">
+        IgestMobile is a sales management system, designed for android,
+        in order to facilitate access to the system and solve the problem away from the customer-supplier.
+    </string>
     <string name="dbl_url">www.database.co.mz</string>
     <string name="igest_welcome">Welcome to InforGest</string>
     <string name="designed_by">Designed By Banucho Cassamo</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <!-- Navigation Titles -->
+    <string name="title_activity_splash_screen">Inforgest</string>
+    <string name="title_activity_product_family_list">Product Family</string>
 
-    <!--
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
-    -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="not_implemented">View Not Implemented</string>
@@ -101,10 +102,10 @@
 
     <!-- Archieve Butons Menu -->
     <!-- Paramentrization Buttons -->
-    <string name="btnFamily">Family</string>
-    <string name="btnGroups">Groups</string>
-    <string name="btnTypOfProd">Type of Products</string>
-    <string name="btnCurUnit">Currency Unit</string>
+    <string name="btnFamily">        Family      </string>
+    <string name="btnGroups">        Groups      </string>
+    <string name="btnTypOfProd">  Type of Products  </string>
+    <string name="btnCurUnit">    Currency Unit   </string>
     <string name="title_activity_group_form">Product Groups</string>
     <string name="title_activity_currency_unit">Currency</string>
 
@@ -169,7 +170,4 @@
 
     <!-- Product Other Buttons -->
     <string name="btnProdOther">Warehouse Transfer</string>
-    <string name="title_activity_splash_screen">Inforgest</string>
-    <string name="hello_world">Hello world!</string>
-
 </resources>

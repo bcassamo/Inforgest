@@ -8,12 +8,20 @@
     <string name="dbl_url">www.database.co.mz</string>
     <string name="igest_welcome">Bem Vindo ao InforGest</string>
     <string name="designed_by">Desenhado por Banucho Cassamo</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <!-- Navigation Titles -->
+    <string name="title_activity_splash_screen">Inforgest</string>
+    <string name="title_activity_product_family_list">Família de Produtos</string>
     
     <string name="navigation_drawer_open">Abre o navigation drawer</string>
     <string name="navigation_drawer_close">Fecha navigation drawer</string>
     <string name="not_implemented">View Não Implementada</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Definições</string>
+    
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Icone</string>
     
     <string-array name="nav_drawer_menu">
         <item >Casa</item>

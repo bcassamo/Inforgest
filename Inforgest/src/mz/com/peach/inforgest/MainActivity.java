@@ -6,6 +6,7 @@ import mz.com.peach.inforgest.fragment.archive.ArchiveFragment;
 import mz.com.peach.inforgest.fragment.customer.CustomerFragment;
 import mz.com.peach.inforgest.fragment.product.ProductFragment;
 import mz.com.peach.inforgest.fragment.supplier.SupplierFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -120,6 +121,26 @@ public class MainActivity extends ActionBarActivity
         
     }
 
+    public void seleccionarOpcao(View view){
+    	FragmentManager fragmentManager = getSupportFragmentManager();
+    	Fragment fragment;
+		switch (view.getId()) {
+		case R.id.action_product_family:
+			fragment = new HomeFragment();
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			break;
+		case R.id.action_group:
+			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/
+			break;
+		case R.id.action_product_type:
+			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/
+			break;
+		case R.id.action_currency2:
+			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/
+			break;
+		}
+	}
+    
     /*public void onSectionAttached(int number) {
         switch (number) {
             case 1:
