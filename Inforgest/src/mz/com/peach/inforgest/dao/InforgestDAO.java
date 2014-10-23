@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import mz.com.peach.inforgest.helper.DatabaseHelper;
 import mz.com.peach.inforgest.model.Product;
+import mz.com.peach.inforgest.model.Archive.ProductFamily;
 
 public class InforgestDAO {
 	private DatabaseHelper helper;
@@ -85,5 +86,69 @@ public class InforgestDAO {
 		return getDb().update(DatabaseHelper.Product.TABLE_PRODUCT, values, DatabaseHelper.Product.COLUMN_ID + " = ?", new String[]{ product.getId().toString() });
 	}
 	
+	public boolean deleteProduct(Long id){
+		String whereClause = DatabaseHelper.Product.COLUMN_ID + " = ?";
+		String[] whereArgs = new String[]{ id.toString() };
+		int deleted = getDb().delete(DatabaseHelper.Product.TABLE_PRODUCT, whereClause, whereArgs);
+		
+		return deleted > 0;
+	}
 	
+	// End Crud for Product
+	
+	// Crud for ProductFamily
+	public List<ProductFamily> listProductFamily() {
+		Cursor cursor = getDb().query(DatabaseHelper.Product.TABLE_PRODUCT,
+				DatabaseHelper.Product.COLUMNS, null, null, null, null, null);
+		List<ProductFamily> productFamilys = new ArrayList<ProductFamily>();
+		while(cursor.moveToNext()){
+			ProductFamily productFamily = makeProductFamily(cursor);
+			productFamilys.add(productFamily);
+		}
+		
+		cursor.close();
+		return productFamilys;
+	}
+
+	private ProductFamily makeProductFamily(Cursor cursor) {
+		ProductFamily productFamily = new ProductFamily(
+				cursor.getLong(cursor.getColumnIndex(DatabaseHelper.ProductFamily.COLUMN_ID)),
+				cursor.getString(cursor.getColumnIndex(DatabaseHelper.ProductFamily.COLUMN_DESCRIPTION))
+				);
+		return productFamily;
+	}
+	
+	public ProductFamily getProductFamilyById(Long id){
+		Cursor cursor = getDb().query(DatabaseHelper.Product.COLUMN_ID, DatabaseHelper.Product.COLUMNS, DatabaseHelper.Product.COLUMN_ID + " = ?", new String[]{id.toString()}, null, null, null);
+		if(cursor.moveToNext()){
+			ProductFamily productFamily = makeProductFamily(cursor);
+			cursor.close();
+			return productFamily;
+		}
+		
+		return null;
+	}
+	
+	public long saveProductFamily(ProductFamily productFamily){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseHelper.ProductFamily.COLUMN_DESCRIPTION, productFamily.getDescription());
+		
+		return getDb().insert(DatabaseHelper.Product.TABLE_PRODUCT, null, values);
+	}
+	
+	public long updateProductFamily(ProductFamily productFamily){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseHelper.Product.COLUMN_DESCRIPTION, productFamily.getDescription());
+		
+		return getDb().update(DatabaseHelper.Product.TABLE_PRODUCT, values, DatabaseHelper.Product.COLUMN_ID + " = ?", new String[]{ productFamily.getId().toString() });
+	}
+	
+	public boolean deleteProductFamily(Long id){
+		String whereClause = DatabaseHelper.Product.COLUMN_ID + " = ?";
+		String[] whereArgs = new String[]{ id.toString() };
+		int deleted = getDb().delete(DatabaseHelper.ProductFamily.TABLE_PRODUCT_FAMILY, whereClause, whereArgs);
+		
+		return deleted > 0;
+	}
+	// End Crud for ProductFamily
 }
