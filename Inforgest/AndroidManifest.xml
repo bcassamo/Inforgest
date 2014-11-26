@@ -31,6 +31,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FamilyProductListActivity"
+            android:label="@string/title_activity_family_product_list"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mz.com.peach.inforgest.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NewProductFamilyActivity"
+            android:label="@string/title_activity_new_product_family"
+            android:parentActivityName=".FamilyProductListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mz.com.peach.inforgest.FamilyProductListActivity" />
+        </activity>
     </application>
 
 </manifest>

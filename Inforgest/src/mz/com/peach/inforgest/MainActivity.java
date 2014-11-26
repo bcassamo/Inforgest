@@ -1,5 +1,6 @@
 package mz.com.peach.inforgest;
 
+import mz.com.peach.inforgest.dao.InforgestDAO;
 import mz.com.peach.inforgest.fragment.Home.HomeFragment;
 import mz.com.peach.inforgest.fragment.about.AboutFragment;
 import mz.com.peach.inforgest.fragment.archive.ArchiveFragment;
@@ -32,6 +33,8 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    
+    private InforgestDAO dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,8 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+        
+        dao = new InforgestDAO(this);
     }
 
     @Override
@@ -122,15 +127,17 @@ public class MainActivity extends ActionBarActivity
     }
 
     public void seleccionarOpcao(View view){
-    	FragmentManager fragmentManager = getSupportFragmentManager();
-    	Fragment fragment;
+    	/*FragmentManager fragmentManager = getSupportFragmentManager();
+    	Fragment fragment;*/
 		switch (view.getId()) {
 		case R.id.action_product_family:
-			fragment = new HomeFragment();
-			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+			startActivity(new Intent(this, FamilyProductListActivity.class));
+			//startActivity(new Intent(this, FamilyProductListFragment.class));
+			/*fragment = new FamilyProductListFragment();
+			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();*/
 			break;
 		case R.id.action_group:
-			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/
+			startActivity(new Intent(this, MainActivity.class));
 			break;
 		case R.id.action_product_type:
 			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/

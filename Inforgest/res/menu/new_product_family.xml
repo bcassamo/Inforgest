@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="mz.com.peach.inforgest.NewProductFamilyActivity" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <item
+        android:id="@+id/action_save_product_family"
+        android:icon="@drawable/action_content_save"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_save" />
+
+</menu>

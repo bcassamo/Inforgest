@@ -11,14 +11,19 @@
     <string name="hello_world">Hello world!</string>
     
     <!-- Navigation Titles -->
+    <string name="action_new">Novo</string>
+    <string name="action_name">Nome</string>
+    <string name="action_save">Salvar</string>
+    <string name="action_settings">Definições</string>
+    <string name="action_example">Example action</string>
+    <string name="not_implemented">View Não Implementada</string>
     <string name="title_activity_splash_screen">Inforgest</string>
-    <string name="title_activity_product_family_list">Família de Produtos</string>
-    
     <string name="navigation_drawer_open">Abre o navigation drawer</string>
     <string name="navigation_drawer_close">Fecha navigation drawer</string>
-    <string name="not_implemented">View Não Implementada</string>
-    <string name="action_example">Example action</string>
-    <string name="action_settings">Definições</string>
+    <string name="title_activity_product_family_list">Família de Produtos</string>
+    <string name="write_a_product_family">Escreva o nome do tipo de produto</string>
+    <string name="title_activity_new_product_family">Nova Familia de Produtos</string>
+    <string name="title_activity_family_product_list">Lista Familia de Produtos</string>
     
     <!-- Content Description -->
     <string name="desc_list_item_icon">Icone</string>

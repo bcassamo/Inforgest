@@ -5,13 +5,13 @@
     android:background="@color/list_background"
     android:orientation="vertical" >
     
-    <RelativeLayout
+	<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ff5722">
         
         <TextView
-            android:id="@+id/action_product_family"
+            android:id="@+id/action_warehouse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -20,54 +20,84 @@
             android:drawableTop="@drawable/action_product_family"
             android:background="@drawable/round_button"
             android:onClick="seleccionarOpcao"
-            android:text="@string/btnFamily"
+            android:text="@string/btnWareHouse"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
         
         <TextView
-            android:id="@+id/action_group"
+            android:id="@+id/action_sellers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignTop="@id/action_product_family"
+            android:layout_alignTop="@id/action_warehouse"
             android:layout_marginRight="50dp"
             android:clickable="true"
             android:drawableTop="@drawable/action_group"
             android:background="@drawable/round_button"
             android:onClick="seleccionarOpcao"
-            android:text="@string/btnGroups"
+            android:text="@string/btnSellers"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
         
         <TextView
-            android:id="@+id/action_product_type"
+            android:id="@+id/action_type_of_client"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/action_product_family"
+            android:layout_alignLeft="@id/action_warehouse"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableTop="@drawable/action_product_type"
+            android:background="@drawable/round_button"
+            android:onClick="seleccionarOpcao"
+            android:text="@string/btnTypeOfClient"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+        <TextView
+            android:id="@+id/action_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/action_sellers"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableTop="@drawable/action_currency2"
+            android:background="@drawable/round_button"
+            android:onClick="seleccionarOpcao"
+            android:text="@string/btnCurrency"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+        
+        
+        <TextView
+            android:id="@+id/action_exchange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/action_warehouse"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="120dp"
             android:clickable="true"
             android:drawableTop="@drawable/action_product_type"
             android:background="@drawable/round_button"
             android:onClick="seleccionarOpcao"
-            android:text="@string/btnTypOfProd"
+            android:text="@string/btnExchange"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
         
         <TextView
-            android:id="@+id/action_currency2"
+            android:id="@+id/action_bank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/action_product_type"
-            android:layout_alignRight="@id/action_group"
+            android:layout_alignRight="@id/action_sellers"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="120dp"
             android:clickable="true"
             android:drawableTop="@drawable/action_currency2"
             android:background="@drawable/round_button"
             android:onClick="seleccionarOpcao"
-            android:text="@string/btnCurUnit"
+            android:text="@string/btnBank"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
         
     </RelativeLayout>
-
+    
 </LinearLayout>
