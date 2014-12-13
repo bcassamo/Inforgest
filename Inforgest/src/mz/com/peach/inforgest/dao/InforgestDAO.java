@@ -12,6 +12,7 @@ import mz.com.peach.inforgest.helper.DatabaseHelper;
 import mz.com.peach.inforgest.model.Product;
 import mz.com.peach.inforgest.model.Archive.ProductFamily;
 import mz.com.peach.inforgest.model.Archive.ProductGroup;
+import mz.com.peach.inforgest.model.Archive.ProductType;
 
 public class InforgestDAO {
 	private DatabaseHelper helper;
@@ -199,6 +200,39 @@ public class InforgestDAO {
 	
 	
 	// Crud for ProductType
+	
+	public List<ProductType> listProductType() {
+		List<ProductType> productTypes = new ArrayList<ProductType>();
+		db = helper.getReadableDatabase();
+		
+		Cursor cursor = getDb().query(DatabaseHelper.ProductType.TABLE_PRODUCT_TYPE,
+				DatabaseHelper.ProductType.COLUMNS, null, null, null, null, null);
+		
+		while(cursor.moveToNext()){
+			ProductType productType = makeproductType(cursor);
+			productTypes.add(productType);
+		}
+		
+		cursor.close();
+		return productTypes;
+	}
+	
+	
+	private ProductType makeproductType(Cursor cursor) {
+		ProductType productType = new ProductType(
+				cursor.getLong(cursor.getColumnIndex(DatabaseHelper.ProductType.COLUMN_ID)),
+				cursor.getString(cursor.getColumnIndex(DatabaseHelper.ProductType.COLUMN_DESCRIPTION))
+				);
+		return productType;
+	}
+	
+	
+	public long saveProductType(ProductType productType){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseHelper.ProductType.COLUMN_DESCRIPTION, productType.getDescription());
+		
+		return getDb().insert(DatabaseHelper.ProductType.TABLE_PRODUCT_TYPE, null, values);
+	}
 	
 	// End Crud for ProductType
 }

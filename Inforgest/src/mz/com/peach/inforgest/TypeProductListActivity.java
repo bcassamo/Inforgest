@@ -1,11 +1,10 @@
 package mz.com.peach.inforgest;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import mz.com.peach.inforgest.dao.InforgestDAO;
-import mz.com.peach.inforgest.model.Archive.ProductFamily;
+import mz.com.peach.inforgest.model.Archive.ProductType;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,21 +15,22 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
-public class FamilyProductListActivity extends ListActivity implements OnItemClickListener {
+public class TypeProductListActivity extends ListActivity implements OnItemClickListener{
 
 	private InforgestDAO dao;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_family_product_list);
+		setContentView(R.layout.activity_group_product_list);
 		
 		dao = new InforgestDAO(this);
 		
-		List<ProductFamily> productFamilys = dao.listProductFamily();
-		List<String> lista =  new ArrayList<String>();
-		for (ProductFamily productFamily : productFamilys) {
-			lista.add(productFamily.getDescription());
+		List<ProductType> productTypes = dao.listProductType();
+		List<String> lista = new ArrayList<String>();
+		
+		for (ProductType productType : productTypes) {
+			lista.add(productType.getDescription());
 		}
 		
 		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista));
@@ -41,41 +41,29 @@ public class FamilyProductListActivity extends ListActivity implements OnItemCli
 		dao = new InforgestDAO(this);
 		super.onResume();
 		
-		List<ProductFamily> productFamilys = dao.listProductFamily();
-		List<String> lista =  new ArrayList<String>();
-		for (ProductFamily productFamily : productFamilys) {
-			lista.add(productFamily.getDescription());
+		List<ProductType> productTypes = dao.listProductType();
+		List<String> lista = new ArrayList<String>();
+		
+		for (ProductType productType : productTypes) {
+			lista.add(productType.getDescription());
 		}
 		
 		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista));
 	}
 	
-	private List<String> listTeste(){
-		return Arrays.asList("teste1", "teste2", "teste3");
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		getMenuInflater().inflate(R.menu.type_product_list, menu);
+		return true;
 	}
 	
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		super.onCreateOptionsMenu(menu);
-		getMenuInflater().inflate(R.menu.family_product_list, menu);
-		return true;
-	}
-
-	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		/*int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);*/
-		
+
 		switch (item.getItemId()) {
-        case R.id.action_prod_family_new:
-        	startActivity(new Intent(this, NewProductFamilyActivity.class));
+        case R.id.action_prod_type_new:
+        	startActivity(new Intent(this, NewProductTypeActivity.class));
             return true;
         case R.id.action_settings:
             return true;
@@ -83,11 +71,13 @@ public class FamilyProductListActivity extends ListActivity implements OnItemCli
             return super.onOptionsItemSelected(item);
     }
 	}
-
+	
+	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
 		// TODO Auto-generated method stub
 		
 	}
+
 }

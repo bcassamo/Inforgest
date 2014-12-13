@@ -54,7 +54,7 @@ public class NewProductFamilyActivity extends Activity {
 		String description = prodFamilyDesc.getEditableText().toString();
 		ProductFamily family = new ProductFamily();
 		family.setDescription(description);
-		Log.d("Salvando", family.getDescription());
+		Log.d("Salvando a familia", family.getDescription());
 		dao.saveProductFamily(family);
 	}
 }

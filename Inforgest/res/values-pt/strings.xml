@@ -20,9 +20,15 @@
     <string name="title_activity_splash_screen">Inforgest</string>
     <string name="navigation_drawer_open">Abre o navigation drawer</string>
     <string name="navigation_drawer_close">Fecha navigation drawer</string>
+    <string name="title_activity_new_product_type">Novo Tipo de Produto</string>
+    <string name="write_a_product_type">Escreva o nome do tipo de produto</string>
     <string name="title_activity_product_family_list">Família de Produtos</string>
-    <string name="write_a_product_family">Escreva o nome do tipo de produto</string>
+    <string name="title_activity_new_product_group">Novo Grupo de Produtos</string>
+    <string name="title_activity_type_product_list">Lista Tipos de Produtos</string>
+    <string name="write_a_product_group">Escreva o nome do grupo de produtos</string>
     <string name="title_activity_new_product_family">Nova Familia de Produtos</string>
+    <string name="title_activity_group_product_list">Lista Grupos de Produtos</string>
+    <string name="write_a_product_family">Escreva o nome da familia do produto</string>
     <string name="title_activity_family_product_list">Lista Familia de Produtos</string>
     
     <!-- Content Description -->

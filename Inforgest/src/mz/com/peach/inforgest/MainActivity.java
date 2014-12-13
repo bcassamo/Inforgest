@@ -5,6 +5,7 @@ import mz.com.peach.inforgest.fragment.Home.HomeFragment;
 import mz.com.peach.inforgest.fragment.about.AboutFragment;
 import mz.com.peach.inforgest.fragment.archive.ArchiveFragment;
 import mz.com.peach.inforgest.fragment.customer.CustomerFragment;
+import mz.com.peach.inforgest.fragment.product.FamilyProductListFragment;
 import mz.com.peach.inforgest.fragment.product.ProductFragment;
 import mz.com.peach.inforgest.fragment.supplier.SupplierFragment;
 import android.content.Intent;
@@ -132,15 +133,15 @@ public class MainActivity extends ActionBarActivity
 		switch (view.getId()) {
 		case R.id.action_product_family:
 			startActivity(new Intent(this, FamilyProductListActivity.class));
-			//startActivity(new Intent(this, FamilyProductListFragment.class));
+			
 			/*fragment = new FamilyProductListFragment();
 			fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();*/
 			break;
 		case R.id.action_group:
-			startActivity(new Intent(this, MainActivity.class));
+			startActivity(new Intent(this, GroupProductListActivity.class));
 			break;
 		case R.id.action_product_type:
-			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/
+			startActivity(new Intent(this, TypeProductListActivity.class));
 			break;
 		case R.id.action_currency2:
 			/*startActivity(new Intent(this, ProductFamilyListActivity.class));*/

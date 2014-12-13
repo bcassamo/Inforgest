@@ -40,12 +40,44 @@
                 android:value="mz.com.peach.inforgest.MainActivity" />
         </activity>
         <activity
+            android:name=".GroupProductListActivity"
+            android:label="@string/title_activity_group_product_list"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mz.com.peach.inforgest.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TypeProductListActivity"
+            android:label="@string/title_activity_type_product_list"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mz.com.peach.inforgest.MainActivity" />
+        </activity>
+        <activity
             android:name=".NewProductFamilyActivity"
             android:label="@string/title_activity_new_product_family"
             android:parentActivityName=".FamilyProductListActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="mz.com.peach.inforgest.FamilyProductListActivity" />
+        </activity>
+        <activity
+            android:name=".NewProductGroupActivity"
+            android:label="@string/title_activity_new_product_group"
+            android:parentActivityName=".GroupProductListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mz.com.peach.inforgest.GroupProductListActivity" />
+        </activity>
+        <activity
+            android:name=".NewProductTypeActivity"
+            android:label="@string/title_activity_new_product_type"
+            android:parentActivityName=".TypeProductListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mz.com.peach.inforgest.TypeProductListActivity" />
         </activity>
     </application>
 
