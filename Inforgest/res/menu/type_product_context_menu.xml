@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_edit_product_type"
+        android:icon="@drawable/action_content_new"
+        android:title="@string/action_edit" />
+
+</menu>

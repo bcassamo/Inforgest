@@ -59,7 +59,7 @@ public class InforgestDAO {
 	}
 	
 	public Product getProductById(Long id){
-		Cursor cursor = getDb().query(DatabaseHelper.Product.COLUMN_ID, DatabaseHelper.Product.COLUMNS, DatabaseHelper.Product.COLUMN_ID + " = ?", new String[]{id.toString()}, null, null, null);
+		Cursor cursor = getDb().query(DatabaseHelper.Product.TABLE_PRODUCT, DatabaseHelper.Product.COLUMNS, DatabaseHelper.Product.COLUMN_ID + " = ?", new String[]{id.toString()}, null, null, null);
 		if(cursor.moveToNext()){
 			Product product = makeProduct(cursor);
 			cursor.close();
@@ -226,12 +226,37 @@ public class InforgestDAO {
 		return productType;
 	}
 	
+	public ProductType getProductTypeById(Long id){
+		Cursor cursor = getDb().query(DatabaseHelper.ProductType.TABLE_PRODUCT_TYPE, DatabaseHelper.ProductType.COLUMNS, DatabaseHelper.ProductType.COLUMN_ID + " = ?", new String[]{id.toString()}, null, null, null);
+		if(cursor.moveToNext()){
+			ProductType productType = makeproductType(cursor);
+			cursor.close();
+			return productType;
+		}
+		
+		return null;
+	}
 	
 	public long saveProductType(ProductType productType){
 		ContentValues values = new ContentValues();
 		values.put(DatabaseHelper.ProductType.COLUMN_DESCRIPTION, productType.getDescription());
 		
 		return getDb().insert(DatabaseHelper.ProductType.TABLE_PRODUCT_TYPE, null, values);
+	}
+	
+	public long updateProductType(ProductType productType){
+		ContentValues values = new ContentValues();
+		values.put(DatabaseHelper.ProductFamily.COLUMN_DESCRIPTION, productType.getDescription());
+		
+		return getDb().update(DatabaseHelper.ProductType.TABLE_PRODUCT_TYPE, values, DatabaseHelper.ProductType.COLUMN_ID + " = ?", new String[]{ productType.getId().toString() });
+	}
+	
+	public boolean deleteProductType(Long id){
+		String whereClause = DatabaseHelper.ProductType.COLUMN_ID + " = ?";
+		String[] whereArgs = new String[]{ id.toString() };
+		int deleted = getDb().delete(DatabaseHelper.ProductType.TABLE_PRODUCT_TYPE, whereClause, whereArgs);
+		
+		return deleted > 0;
 	}
 	
 	// End Crud for ProductType

@@ -14,8 +14,10 @@
     <string name="action_new">Novo</string>
     <string name="action_name">Nome</string>
     <string name="action_save">Salvar</string>
+    <string name="action_edit">Alterar</string>
     <string name="action_settings">Definições</string>
     <string name="action_example">Example action</string>
+    
     <string name="not_implemented">View Não Implementada</string>
     <string name="title_activity_splash_screen">Inforgest</string>
     <string name="navigation_drawer_open">Abre o navigation drawer</string>

@@ -8,16 +8,22 @@ import mz.com.peach.inforgest.model.Archive.ProductType;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 public class TypeProductListActivity extends ListActivity implements OnItemClickListener{
 
 	private InforgestDAO dao;
+	List<ProductType> productTypes;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +32,7 @@ public class TypeProductListActivity extends ListActivity implements OnItemClick
 		
 		dao = new InforgestDAO(this);
 		
-		List<ProductType> productTypes = dao.listProductType();
+		productTypes = dao.listProductType();
 		List<String> lista = new ArrayList<String>();
 		
 		for (ProductType productType : productTypes) {
@@ -34,6 +40,9 @@ public class TypeProductListActivity extends ListActivity implements OnItemClick
 		}
 		
 		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lista));
+		
+		getListView().setOnItemClickListener(this);
+		registerForContextMenu(getListView());
 	}
 	
 	@Override
@@ -41,7 +50,7 @@ public class TypeProductListActivity extends ListActivity implements OnItemClick
 		dao = new InforgestDAO(this);
 		super.onResume();
 		
-		List<ProductType> productTypes = dao.listProductType();
+		productTypes = dao.listProductType();
 		List<String> lista = new ArrayList<String>();
 		
 		for (ProductType productType : productTypes) {
@@ -72,12 +81,38 @@ public class TypeProductListActivity extends ListActivity implements OnItemClick
     }
 	}
 	
-	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position,
 			long id) {
-		// TODO Auto-generated method stub
-		
+		long code = productTypes.get(position).getId();
+		ProductType productType = dao.getProductTypeById(code);
+		String mensagem = "Gasto seleccionada: " + productType.getDescription()+ " com id: " + productType.getId() + " iii " + id + " code " + code;
+		Toast.makeText(this, mensagem, Toast.LENGTH_SHORT).show();
 	}
 
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+			ContextMenuInfo menuInfo) {
+		super.onCreateContextMenu(menu, v, menuInfo);
+		
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.type_product_context_menu, menu);
+	}
+	
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		
+		Intent intent;
+		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
+		switch (item.getItemId()) {
+		case R.id.action_edit_product_type:
+			intent = new Intent(this, NewProductTypeActivity.class);
+			startActivity(intent);
+			getListView().invalidateViews();
+			return true;
+
+		default:
+			return super.onContextItemSelected(item);
+		}
+	}
 }
